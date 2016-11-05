@@ -52,7 +52,7 @@ public class HotelAdapter extends RecyclerView.Adapter<HotelAdapter.ViewHolder> 
     }
 
     public interface IHotelAdapter {
-        void doCLick(int pos);
+        void doClick(int pos);
 
         void doEdit(int pos);
 
@@ -86,7 +86,7 @@ public class HotelAdapter extends RecyclerView.Adapter<HotelAdapter.ViewHolder> 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    mIHotelAdapter.doCLick(getAdapterPosition());
+                    mIHotelAdapter.doClick(getAdapterPosition());
                 }
             });
             bEdit.setOnClickListener(new View.OnClickListener() {
