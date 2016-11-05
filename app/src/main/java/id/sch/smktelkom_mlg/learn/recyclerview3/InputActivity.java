@@ -29,6 +29,13 @@ public class InputActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        hotel = (Hotel) getIntent().getSerializableExtra(MainActivity.HOTEL);
+        if (hotel != null) {
+            setTitle("Edit" + hotel.judul);
+            fillData();
+        } else {
+            setTitle("New Hotel");
+        }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_input);
 
@@ -52,6 +59,15 @@ public class InputActivity extends AppCompatActivity {
                         doSave();
                     }
                 });
+    }
+
+    private void fillData() {
+        etJudul.setText(hotel.judul);
+        etDeskripsi.setText(hotel.deskripsi);
+        etDetail.setText(hotel.detail);
+        etLokasi.setText(hotel.lokasi);
+        uriFoto = Uri.parse(hotel.foto);
+        ivFoto.setImageURI(uriFoto);
     }
 
     private void doSave() {
@@ -119,6 +135,7 @@ public class InputActivity extends AppCompatActivity {
             uriFoto = data.getData();
             ivFoto.setImageURI(uriFoto);
         }
+
     }
 
 
