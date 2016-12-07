@@ -8,3 +8,8 @@ Class : XIIRPL5 - 26
 
 
 School : SMK Telkom Malang
+
+
+![alt tag](https://github.com/ikaru19/RecyclerView3/blob/master/1.jpeg)
+![alt tag](https://github.com/ikaru19/RecyclerView3/blob/master/2.jpeg)
+![alt tag](https://github.com/ikaru19/RecyclerView3/blob/master/3.jpeg)
